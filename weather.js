@@ -9,4 +9,4 @@ weather_data = (city)=> {
         return response.json();
     })
 }
-console.log(weather_data("arlington"));
+//console.log(weather_data("arlington"));
