@@ -1,0 +1,11 @@
+
+#city-input, #weather-output {
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+.banner {
+    color:red;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
