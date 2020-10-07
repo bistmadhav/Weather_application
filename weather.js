@@ -9,4 +9,27 @@ weather_data = (city)=> {
         return response.json();
     })
 }
+
+user_input_city = () => {
+
+const city_from_user = document.getElementById('city_user_input').value;
+weather_data(city_from_user)
+.then((response)=>{
+    console.log(response);
+    data_to_output(response);
+}).catch((error)=>{
+ console.log(error);
+ console.log("Problem in receiving the data")
+})
+}
 //console.log(weather_data("arlington"));
+
+data_to_output = (weatherData) => {
+    document.getElementById("city-name").innerText = weatherData.name;
+    document.getElementById("weather-type").innerText = weatherData.weather[0].main;
+    document.getElementById("temp").innerText = weatherData.main.temp;
+    document.getElementById("min-temp").innerText = weatherData.main.temp_min;
+    document.getElementById("max-temp").innerText = weatherData.main.temp_max;
+    document.getElementById("weather-output").classList.add('visible');
+  }
+  
